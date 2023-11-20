@@ -1,0 +1,18 @@
+/* CSS file */
+.hero-banner {
+  background-color: #50a16f; /* Change to your preferred background color */
+  padding: 80px 0; /* Adjust the padding as needed */
+  margin: 50px 0px 50px 0px;
+}
+
+.caption {
+  margin-top: 20px; /* Adjust the margin between caption and image */
+}
+
+.main-heading h1 {
+  margin-top: 20px; /* Adjust the margin between caption and main heading */
+}
+
+.img-profile {
+  border-radius: 100px;
+}

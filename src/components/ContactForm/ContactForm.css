@@ -1,0 +1,14 @@
+/* ContactForm.css */
+.contact-form-container {
+  margin: 0 auto; /* Center align the container */
+  max-width: 600px; /* Set max-width for the container */
+  padding: 20px;
+  background-color: #b0c6f5;
+  border-width: 1px;
+  margin-bottom: 50px;
+}
+
+.form-title {
+  text-align: center; /* Center align the text */
+  margin-bottom: 20px; /* Add space below the title */
+}
