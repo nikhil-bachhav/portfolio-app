@@ -15,10 +15,10 @@ const HeroSection = () => {
               className={`img-fluid ${styles["img-profile"]}`}
             />
             <div className={styles.caption}>
-              <h6>Your Caption Here</h6>
+              <h6>Nikhil Bachhav</h6>
             </div>
             <div className={styles["main-heading"]}>
-              <h1>Main Heading</h1>
+              <h1>I'm a Software Developer</h1>
             </div>
           </Col>
         </Row>

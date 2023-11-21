@@ -12,3 +12,9 @@
   text-align: center; /* Center align the text */
   margin-bottom: 20px; /* Add space below the title */
 }
+
+.error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 5px;
+}

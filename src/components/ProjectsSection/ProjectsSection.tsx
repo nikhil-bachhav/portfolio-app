@@ -37,26 +37,14 @@ const ProjectsSection: React.FC = () => {
       description: "Description for Card 4",
       moreLink: "https://example.com/card2",
     },
-    {
-      title: "Card 5",
-      imageUrl: "https://picsum.photos/id/34/450/250",
-      description: "Description for Card 5",
-      moreLink: "https://example.com/card2",
-    },
-    {
-      title: "Card 6",
-      imageUrl: "https://picsum.photos/id/45/450/250",
-      description: "Description for Card 6",
-      moreLink: "https://example.com/card2",
-    },
   ];
 
   return (
-    <Container className="py-5 project-container" id="projects">
+    <Container className="py-5 project-container mb-5" id="projects">
       <h1 className="section-title">Projects</h1>
       <Row className="justify-content-center">
         {cardData.map((card, index) => (
-          <Col key={index} md={4} className="mb-4">
+          <Col key={index} md={6} className="mb-4">
             <Card
               title={card.title}
               imageUrl={card.imageUrl}

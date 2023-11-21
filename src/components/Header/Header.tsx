@@ -3,15 +3,33 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faEvernote,
   faGithub,
   faLinkedin,
-  faMailchimp,
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from "react";
 
 function Header() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos, visible]);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollPos > currentScrollPos;
+
+    setPrevScrollPos(currentScrollPos);
+    setVisible(visible);
+  };
+
   const scrollToSection = (sectionId: any) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -21,19 +39,20 @@ function Header() {
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary"
+      className={`bg-body-tertiary ${visible ? "visible" : "hidden"}`}
       bg="dark"
       data-bs-theme="dark"
+      style={{ display: visible ? "block" : "none" }}
       fixed="top"
     >
       <Container>
-        <Navbar.Brand href="#home">Nikhil Bachhav</Navbar.Brand>
+        <Navbar.Brand href="#home">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="mailto:youremail@example.com" target="_blank">
               <FontAwesomeIcon
-                icon={faMailchimp}
+                icon={faEnvelope}
                 size="1x"
                 style={{ margin: "0px 10px 0px 10px" }}
               />
